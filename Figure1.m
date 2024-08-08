@@ -119,7 +119,7 @@ for type = 1:2
 end
 
 % Panel G
-load('ConnEx')
+load('ConnEx2')
 figure
 imagesc(allTest)
 map = colorcet( 'C2' ); map = circshift(map, [28,0]); colormap( map);
