@@ -2,7 +2,7 @@
 % Dependencies include generalized_phase.m from https://github.com/mullerlab/generalized-phase
 % bandpass_filter.m from https://github.com/mullerlab/wave-matlab
 
-load('F2_upload_data_2024update.mat')
+load('Fig2_data.mat')
 
 % a - example lfp 
 lfp = F2.lfp_a; 
@@ -17,6 +17,7 @@ legend( 'raw', 'filtered')
 
 % b - epoch
 lfp = F2.lfp_b;
+
 filtLFP = bandpass_filter(lfp,5,50,4,1000);
 xgp = generalized_phase( filtLFP, 1e3,5);
 
